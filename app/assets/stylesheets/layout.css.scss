@@ -44,69 +44,85 @@ h1 {
 }
 /* Middle
 -----------------------------------------------------------------------------*/
-/*.page-container {
-    width: 100%;
-    margin: 0 auto;
-    padding-top: 16px;
-}*/
-#menu {
-    // visibility: hidden;
-    visibility: visible;
+#about-page, #contacts-page {
+    #menu > ul {
+        &:after {
+            background: url(image_path('menu-bg-right-w.png')) no-repeat;
+        }
+    }
+}
+#music-page, #media-page {
+    #menu > ul {
+        &:before {
+            background: url(image_path('menu-bg-left-w.png')) no-repeat;
+        }
+    }
+}
+#about-page {
+    .title-img {
+        background: url(image_path('about.png')) no-repeat;
+        width: 255px;
+        height: 55px;
+    }
+}
+#music-page {
+    .title-img {
+        background: url(image_path('music.png')) no-repeat;
+        width: 235px;
+        height: 55px;
+    }
+}
+#menu > ul {
+    visibility: hidden;
     font-size: 11px;
     font-weight: bold;
     display: block;
-    list-style-type: none;
+    list-style: none;
     height: 29px;
     background-color: #252525;
     position: relative;
+    > li {
+        float: left;
+        color: #fff;
+        text-transform: uppercase;
+        line-height: 29px;
+        a {
+            outline: 0;
+            line-height: 29px;
+            vertical-align: middle;
+            padding: 0 16px;
+            color: #fff;
+            display: block;
+            &:hover {
+                background-color: #444;
+            }
+        }
+        &.selected a, &.selected a:hover {
+            background-color: #666;
+        }
+    }
+    &:before {
+        content: '';
+        background: url(image_path('menu-bg-left.png')) no-repeat;
+        width: 10px;
+        height: 29px;
+        position: absolute;
+        left: -10px;
+        top: 0;
+        padding: 0;
+    }
+    &:after {
+        content: '';
+        background: url(image_path('menu-bg-right.png')) no-repeat;
+        position: absolute;
+        top: 0;
+        right: -10px;
+        width: 10px;
+        height: 29px;
+    }
 }
-
-#menu li {
-    float: left;
-    color: #fff;
-    text-transform: uppercase;
-    line-height: 29px;
-}
-#menu li a {
-    outline: 0;
-    line-height: 29px;
-    vertical-align: middle;
-    padding: 0 16px;
-    color: #fff;
-    display: block;
-}
-#menu li a:hover {
-    background-color: #444;
-}
-#menu li.active a, #menu li.active a:hover {
-    background-color: #666;
-}
-#menu:before {
-    content: ' ';
-    background: url(image_path('menu-bg-left.png')) no-repeat;
-    width: 10px;
-    height: 29px;
-    position: absolute;
-    left: -10px;
-    top: 0;
-    padding: 0;
-}
-#menu:after {
-    content: ' ';
-    background: url(image_path('menu-bg-right.png')) no-repeat;
-    position: absolute;
-    top: 0;
-    right: -10px;
-    width: 10px;
-    height: 29px;
-}
-.about #menu:after, .contacts #menu:after {
-    background: url(image_path('menu-bg-right-w.png')) no-repeat;
-}
-.music #menu:before, .media #menu:before {
-    background: url(image_path('menu-bg-left-w.png')) no-repeat;
-}
-.content-inner {
+#page {
+    word-wrap: break-word;
     width: 100%;
     line-height: 200%;
     letter-spacing: 1px;
@@ -114,13 +130,13 @@ h1 {
 .side {
     padding: 60px 50px 0;
     overflow: hidden;
-    height: 440px;
+    height: 580px;
 }
 .side.right {
     margin-left: 500px;
 }
 .side.left {
-    height: 510px;
+    // height: 510px;
     margin-right: 500px;
     float: left;
     width: 500px;
@@ -132,23 +148,12 @@ h1 {
     margin: 0 auto;
     margin-bottom: 40px;
 }
-.about .title-img {
-    background: url(image_path('about.png')) no-repeat;
-    width: 255px;
-    height: 55px;
-}
-.music .title-img {
-    background: url(image_path('music.png')) no-repeat;
-    width: 235px;
-    height: 55px;
-}
 .introduction {
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 20px;
-
 }
-.text {
+.text-2-column {
     column-count: 2;
     -moz-column-count: 2;
     -webkit-column-count: 2;
@@ -212,7 +217,7 @@ h1 {
 .songs .list li .song-time {
     display: inline-block;
     float: right;
-    color: #d2d2d2;
+    color: #626262;
     line-height: 22px;
     vertical-align: middle;
 }
