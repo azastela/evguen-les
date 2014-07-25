@@ -184,41 +184,68 @@ h1 {
     margin-top:-20px;
     position: relative;
 }
+
 .songs .list {
     padding-left: 20px;
     text-transform: uppercase;
     width: 255px;
     margin: 0 auto;
     list-style: none;
-}
-.songs .list li {
-    border-bottom: 1px solid #f8f8f8;
-    height: 22px;
-}
-.songs .list li .play-btn {
-    width: 6px;
-    height: 6px;
-    float: left;
-    margin-left: -15px;
-    margin-top: 7px;
-    padding: 0;
-    border-left: 6px solid #d3d3d3;
-    border-top: 3px solid transparent;
-    border-bottom: 3px solid transparent;
-}
-.songs .list li a {
-    display: inline-block;
-    padding-top: 2px;
-}
-.songs .list li .song-name {
-    float: left;
-    vertical-align: middle;
-}
-.songs .list li .song-time {
-    display: inline-block;
-    float: right;
-    color: #626262;
-    line-height: 22px;
-    vertical-align: middle;
+    li {
+        margin-bottom: 5px;
+        height: 22px;
+        .play {
+            width: 8px;
+            height: 8px;
+            float: left;
+            margin-left: -15px;
+            margin-top: 6px;
+            padding: 0;
+            -moz-border-bottom-colors: none;
+            -moz-border-left-colors: none;
+            -moz-border-right-colors: none;
+            -moz-border-top-colors: none;
+            background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+            border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #a3a3a3;
+            border-image: none;
+            border-style: solid;
+            border-width: 4px 0 4px 8px;
+            &:hover {
+                border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #535353;
+            }
+        }
+        .stop {
+            float: left;
+            margin-left: -15px;
+            margin-top: 6px;
+            padding: 0;
+            height: 8px;
+            width: 8px;
+            background-color: #a3a3a3;
+            &:hover {
+                background-color: #535353;
+            }
+        }
+        a {
+            display: inline-block;
+        }
+        .song-name {
+            float: left;
+            height: 22px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            vertical-align: middle;
+            white-space: nowrap;
+            width: 200px;
+            word-wrap: break-word;
+        }
+        .song-time {
+            display: inline-block;
+            float: right;
+            color: #626262;
+            line-height: 22px;
+            vertical-align: middle;
+        }
+    }
 }
 
