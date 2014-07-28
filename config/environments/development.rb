@@ -41,7 +41,7 @@ EvguenLes::Application.configure do
 
   ENV['S3_KEY']='AKIAJPSQ4T4XO4LYOJKA'
   ENV['S3_SECRET']='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'
-  ENV['S3_BUCKET']='evguen-les'
+  ENV['S3_BUCKET']='evguen-less'
 
   Refinery::Core.configure do |config|
     config.s3_backend = true
