@@ -154,6 +154,7 @@ h1 {
     margin-bottom: 20px;
 }
 .text-2-column {
+    text-overflow: ellipsis;
     column-count: 2;
     -moz-column-count: 2;
     -webkit-column-count: 2;

@@ -66,4 +66,8 @@ EvguenLes::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+
+  ENV['S3_KEY']='AKIAJPSQ4T4XO4LYOJKA'
+  ENV['S3_SECRET']='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'
+  ENV['S3_BUCKET']='evguen-les'
 end

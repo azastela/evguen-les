@@ -38,4 +38,15 @@ EvguenLes::Application.configure do
   config.assets.debug = true
 
   Refinery::Core.config.s3_backend = true
+
+  ENV['S3_KEY']='AKIAJPSQ4T4XO4LYOJKA'
+  ENV['S3_SECRET']='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'
+  ENV['S3_BUCKET']='evguen-les'
+
+  Refinery::Core.configure do |config|
+    config.s3_backend = true
+    config.s3_access_key_id = 'AKIAJPSQ4T4XO4LYOJKA'
+    config.s3_secret_access_key = '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'
+    config.s3_bucket_name = 'evguen-less'
+  end
 end
