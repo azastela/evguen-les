@@ -1,7 +1,6 @@
 <li>
 	<a href="#" class="play"></a>
-	<span class="song-name"><%= resource.file_name %></span>
-	<span class="song-time">4:50</span>
+	<span class="song-name"><%= raw base_path(resource.file_name) %></span>
 	<audio class="player">
 		<source src="<%= resource.url %>" type="audio/mp3">
     </audio> 
