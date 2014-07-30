@@ -11,6 +11,13 @@ end
 
 module EvguenLes
   class Application < Rails::Application
+    AWS::S3::Base.establish_connection!(
+        :access_key_id     => 'AKIAJPSQ4T4XO4LYOJKA',
+        :secret_access_key => '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'
+    )
+
+    BUCKET = 'evguen-less'
+
     config.i18n.enforce_available_locales = false
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
